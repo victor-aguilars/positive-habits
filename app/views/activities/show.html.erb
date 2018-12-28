@@ -1,19 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @activity.description %>
-</p>
+<h2 align="center">Description: <%= @activity.description %></h2>
 
-<p>
-  <strong>Date:</strong>
+<div class="well col-xs-8 col-xs-offset-2">
+  <h4 class="center description"><strong>Date:</strong></h4>
   <%= @activity.date %>
-</p>
-
-<p>
-  <strong>Habit:</strong>
-  <%= @activity.habit.title %>
-</p>
-
-<%= link_to 'Edit', edit_activity_path(@activity) %> |
-<%= link_to 'Back', activities_path %>
+  <hr>
+  <h4 class="center description"><strong>Habit:</strong></h4>
+  <%= simple_format(@activity.habit.title) %>
+  <hr>
+  <div class="button-actions">
+    <%= link_to 'Edit this activity', edit_activity_path(@activity), class: "btn btn-xs btn-primary" %>
+    <%= link_to 'Delete this activity', activity_path(@activity), method: :delete, data: {confirm: "Are you sure you want to delete the activity?"}, class: "btn btn-xs btn-danger" %>
+    <%= link_to 'View all activities', activities_path, class: "btn btn-xs btn-success" %>
+  </div>
+</div>

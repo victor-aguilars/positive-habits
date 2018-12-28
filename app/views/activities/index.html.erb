@@ -1,31 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Activities</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Date</th>
-      <th>Habit</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @activities.each do |activity| %>
-      <tr>
-        <td><%= activity.description %></td>
-        <td><%= activity.date %></td>
-        <td><%= activity.habit.title %></td>
-        <td><%= link_to 'Show', activity %></td>
-        <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
-        <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<h1 align="center">Listing all activities</h1>
 
-<br>
-
-<%= link_to 'New Activity', new_activity_path %>
+<% @activities.each do |activity| %>
+<div class="row">
+  <div class="col-xs-8 col-xs-offset-2">
+    <div class="well well-lg">
+      <div class="object-title">
+        <td><%= link_to truncate(activity.description, lenght: 30), activity_path(activity) %></td>
+      </div>
+      <div class="object-body">
+        <%= activity.date %>
+      </div>
+      <div class="object-body">
+        <%= activity.habit.title %>
+      </div>
+      <div class="button-actions">
+        <%= link_to 'Edit this activity', edit_activity_path(activity), class: "btn btn-xs btn-primary" %>
+        <%= link_to 'Delete this activity', activity_path(activity), method: :delete, data: {confirm: "Are you sure you want to delete the activity?"}, class: "btn btn-xs btn-danger" %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

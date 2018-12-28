@@ -1,2 +1,38 @@
+$navbar-default-bg: #2980b9;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.link-nav {
+  color: #fff !important;
+}
+
+.button-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+}
+
+.object-title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.object-body {
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
