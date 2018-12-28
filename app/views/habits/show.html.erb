@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @habit.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @habit.description %>
+</p>
+
+<%= link_to 'Edit', edit_habit_path(@habit) %> |
+<%= link_to 'Back', habits_path %>
