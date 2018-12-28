@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :habit_id %>
-    <%= form.text_field :habit_id %>
+    <%= form.collection_select :habit_id, Habit.order(:title), :id, :title, include_blank: false  %>
   </div>
 
   <div class="actions">

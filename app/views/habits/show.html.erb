@@ -10,5 +10,16 @@
   <%= @habit.description %>
 </p>
 
+<p>
+  <strong>Activities:</strong>
+  <% if  @habit.activities.empty? %>
+    <p>No activities yet</p>
+  <% end %>
+
+  <% @habit.activities.each do |a| %>
+    <p><%= a.description %> | <%= a.date %></p>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_habit_path(@habit) %> |
 <%= link_to 'Back', habits_path %>

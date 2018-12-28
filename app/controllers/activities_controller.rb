@@ -15,6 +15,7 @@ class ActivitiesController < ApplicationController
   # GET /activities/new
   def new
     @activity = Activity.new
+    @habits = Habit.all
   end
 
   # GET /activities/1/edit
