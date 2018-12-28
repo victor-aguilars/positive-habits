@@ -1,2 +1,4 @@
 class Habit < ApplicationRecord
+  has_many :activities
+  validates :title, presence: true, length: { minimum: 3, maximum: 50 }
 end

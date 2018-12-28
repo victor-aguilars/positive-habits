@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_28_195728) do
+ActiveRecord::Schema.define(version: 2018_12_28_201126) do
+
+  create_table "activities", force: :cascade do |t|
+    t.text "description"
+    t.date "date"
+    t.integer "habit_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["habit_id"], name: "index_activities_on_habit_id"
+  end
 
   create_table "habits", force: :cascade do |t|
     t.string "title"
