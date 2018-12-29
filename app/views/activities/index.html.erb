@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-
-
 <h1 align="center">Listing all activities</h1>
+
+<% if  @activities.empty? %>
+  <p  align="center">No activities yet</p>
+<% end %>
 
 <% @activities.each do |activity| %>
 <div class="row">

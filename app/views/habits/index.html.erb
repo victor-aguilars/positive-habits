@@ -2,6 +2,10 @@
 
 <h1 align="center">Listing all habits</h1>
 
+<% if  @habits.empty? %>
+  <p  align="center">No habits yet</p>
+<% end %>
+
 <% @habits.each do |habit| %>
 <div class="row">
   <div class="col-xs-8 col-xs-offset-2">
