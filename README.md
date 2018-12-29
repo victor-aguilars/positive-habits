@@ -1,24 +1,15 @@
-# README
+# Positive Habits
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application allows you to record all the activities you do until you make them into a habit!
 
-Things you may want to cover:
+Follow the instructions using Rails 5:
 
-* Ruby version
+* git clone https://github.com/victor-aguilars/positive-habits.git
 
-* System dependencies
+* cd positive-habits
 
-* Configuration
+* bundle install --without production
 
-* Database creation
+* rails db:migrate
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* rails server
