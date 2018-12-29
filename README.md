@@ -4,12 +4,18 @@ This application allows you to record all the activities you do until you make t
 
 Follow the instructions using Rails 5:
 
-* git clone https://github.com/victor-aguilars/positive-habits.git
+* $ git clone https://github.com/victor-aguilars/positive-habits.git
 
-* cd positive-habits
+* $ cd positive-habits
 
-* bundle install --without production
+* $ bundle install --without production
 
-* rails db:migrate
+* $ rails db:migrate
 
-* rails server
+* $ rails server
+
+Future works:
+
+* Authentication
+
+* Improve the UX
